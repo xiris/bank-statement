@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize, Queryable)]
 pub struct Transaction {
-    pub id: i32,
+    pub id: Option<i32>,
     pub booking_date: String,
     pub value_date: String,
     pub booking_text: String,
@@ -18,7 +18,7 @@ pub struct Transaction {
 }
 
 #[derive(Debug, Insertable)]
-#[tble_name = "transactions"]
+#[table_name = "transactions"]
 pub struct TransactionNew<'a> {
     pub booking_date: &'a str,
     pub value_date: &'a str,
