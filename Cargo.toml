@@ -7,14 +7,18 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-csv = "1.1"
+dotenv = "0.15.0"
 serde = { version = "1", features = ["derive"]}
 serde_json = "1.0"
 derive_more = "0.99.2"
-rusty-money = "0.4.0"
 actix-web = "3.3.2"
+actix-web-httpauth = "0.5.1"
 actix-rt = "1.1.1"
+actix-service = "2.0.0"
 diesel = { version = "1.4.6", features = ["sqlite", "r2d2"]}
-dotenv = "0.15.0"
+reqwest = "0.9.24"
+alcoholic_jwt = "1.0.0"
+csv = "1.1"
+rusty-money = "0.4.0"
 anyhow = "1.0"
 chrono = "0.4.15"
