@@ -338,6 +338,7 @@ dependencies = [
  "anyhow",
  "chrono",
  "csv",
+ "derive_more",
  "diesel",
  "dotenv",
  "rusty-money",

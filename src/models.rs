@@ -36,5 +36,14 @@ pub struct TransactionNew<'a> {
 #[derive(Debug, Serialize, Deserialize)]
 pub struct TransactionJson {
     pub booking_date: String,
+    pub value_date: String,
+    pub booking_text: String,
+    pub beneficiary: String,
+    pub purpose: String,
+    pub account_number: String,
+    pub sort_code: String,
     pub amount: String,
+    pub creditor_id: String,
+    pub mandate_reference: String,
+    pub customer_reference: String,
 }

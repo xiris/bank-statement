@@ -28,9 +28,9 @@ async fn main() -> std::io::Result<()> {
         App::new()
             .data(pool.clone())
             .route("/transactions", web::get().to(handlers::get_transactions))
-            //.route("/transactions/{id}", web::get().to(handlers::get_transaction_by_id))
-            //.route("/transactions", web::post().to(handlers::add_transaction))
-            //.route("/transactions", web::delete().to(handlers::delete_transaction))
+            .route("/transactions/{id}", web::get().to(handlers::get_transaction_by_id))
+            .route("/transactions", web::post().to(handlers::add_transaction))
+            .route("/transactions", web::delete().to(handlers::delete_transaction))
     })
     .bind("127.0.0.1:8081")?
     .run()
